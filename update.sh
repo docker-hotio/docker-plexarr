@@ -13,9 +13,9 @@ elif [[ ${1} == "tests" ]]; then
     echo "Listing packages..."
     docker run --rm --entrypoint="" "${2}" apk -vv info | sort
     echo "Show version info..."
-    docker run --rm --entrypoint="" "${2}" rclone version
+    docker run --rm --entrypoint="" "${2}" plexarr version
 else
-    version=$(curl -fsSL "https://downloads.rclone.org/version.txt" | sed s/rclone\ v//g)
+    version=$(curl -u "${GITHUB_ACTOR}:${GITHUB_TOKEN}" -fsSL "https://api.github.com/repos/l3uddz/plexarr/releases/latest" | jq -r .tag_name | sed s/v//g)
     [[ -z ${version} ]] && exit 1
     echo "VERSION=${version}" > VERSION
     echo "##[set-output name=version;]${version}"
