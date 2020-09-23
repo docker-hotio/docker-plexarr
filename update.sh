@@ -13,7 +13,9 @@ elif [[ ${1} == "tests" ]]; then
     echo "Listing packages..."
     docker run --rm --entrypoint="" "${2}" apk -vv info | sort
     echo "Show version info..."
-    docker run --rm --entrypoint="" "${2}" plexarr version
+    docker run --rm --entrypoint="" "${2}" plexarr --version
+    echo "Show help info..."
+    docker run --rm --entrypoint="" "${2}" plexarr --help
 else
     version=$(curl -u "${GITHUB_ACTOR}:${GITHUB_TOKEN}" -fsSL "https://api.github.com/repos/l3uddz/plexarr/releases/latest" | jq -r .tag_name | sed s/v//g)
     [[ -z ${version} ]] && exit 1
