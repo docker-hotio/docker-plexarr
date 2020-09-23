@@ -11,9 +11,3 @@ updates:
     schedule:
       interval: "daily"
     target-branch: "stable"
-
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    target-branch: "unstable"
