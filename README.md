@@ -23,5 +23,6 @@ The default `ENTRYPOINT` is `plexarr`.
 | ---------|--------------------------------|
 | latest   | The same as `stable`           |
 | stable   | Stable version                 |
+| unstable | Every commit to master branch  |
 
 You can also find tags that reference a commit or version number.
