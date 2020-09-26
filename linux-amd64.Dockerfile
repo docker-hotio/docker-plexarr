@@ -3,7 +3,7 @@ FROM golang:alpine as builder
 ARG VERSION
 
 RUN apk add --no-cache git build-base && \
-    git clone -n https://github.com/hotio/plexarr.git /plexarr && cd /plexarr && \
+    git clone -n https://github.com/l3uddz/plexarr.git /plexarr && cd /plexarr && \
     git checkout ${VERSION} -b hotio && \
     make && \
     chmod 755 /plexarr/dist/plexarr_linux_amd64/plexarr
