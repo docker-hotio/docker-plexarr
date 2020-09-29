@@ -17,6 +17,21 @@ docker run --rm hotio/plexarr ...
 
 The default `ENTRYPOINT` is `plexarr`.
 
+## Getting a Plex token for use in your configuration
+
+Run the following command, but replace `<plex_username>` and `<plex_password>` with your actual username and password.
+
+```shell
+docker run --rm --entrypoint get-token hotio/plexarr <plex_username> <plex_password>
+```
+
+You should see something like this, if all went well:
+
+```shell
+Trying to get a Plex token...
+Your Plex token is: xxxxxxxxxxxxxxxxxxxx
+```
+
 ## Tags
 
 | Tag              | Upstream                      |
