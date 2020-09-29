@@ -19,10 +19,9 @@ The default `ENTRYPOINT` is `plexarr`.
 
 ## Tags
 
-| Tag      | Description                    |
-| ---------|--------------------------------|
-| latest   | The same as `stable`           |
-| stable   | Stable version                 |
-| unstable | Every commit to master branch  |
+| Tag              | Upstream                      |
+| -----------------|-------------------------------|
+| release (latest) | GitHub releases               |
+| nightly          | Every commit to master branch |
 
 You can also find tags that reference a commit or version number.
