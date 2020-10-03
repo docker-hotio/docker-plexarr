@@ -1,5 +1,3 @@
-# plexarr
-
 ![Base](https://img.shields.io/badge/base-alpine-blue)
 [![GitHub](https://img.shields.io/badge/source-github-lightgrey)](https://github.com/hotio/docker-plexarr)
 [![Docker Pulls](https://img.shields.io/docker/pulls/hotio/plexarr)](https://hub.docker.com/r/hotio/plexarr)
