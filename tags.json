@@ -16,10 +16,10 @@
     },
     {
       "name": "nightly",
-      "version": "",
-      "commit": "",
+      "version": "8403109056c71abb47f354550436b0ded51299e3",
+      "commit": "e6ed805",
       "upstream": "Every commit to master",
-      "lastUpdated": ""
+      "lastUpdated": "2021-02-23T14:34:53.817Z"
     }
   ]
 }
