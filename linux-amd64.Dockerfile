@@ -5,7 +5,7 @@ RUN wget -O /usr/local/bin/plexarr "https://github.com/l3uddz/plexarr/releases/d
 COPY get-token.sh /usr/local/bin/get-token
 RUN chmod 755 /usr/local/bin/get-token
 
-FROM alpine@sha256:e103c1b4bf019dc290bcc7aca538dc2bf7a9d0fc836e186f5fa34945c5168310
+FROM alpine@sha256:def822f9851ca422481ec6fee59a9966f12b351c62ccb9aca841526ffaa9f748
 ENTRYPOINT ["plexarr"]
 RUN apk add --no-cache curl jq
 COPY --from=builder /usr/local/bin/get-token /usr/local/bin/get-token
